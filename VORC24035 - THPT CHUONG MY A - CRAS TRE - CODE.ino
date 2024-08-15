@@ -42,7 +42,6 @@ bool chuyen = false;
 int cua = 700;
 int speed = 3071;
 bool boost = false;
-bool nang = false;
 
 void setup() {
 
