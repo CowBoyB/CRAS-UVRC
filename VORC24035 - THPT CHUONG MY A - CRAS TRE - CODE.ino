@@ -25,7 +25,7 @@ PS2X ps2x;
 #define DL 10
 #define AL 11
 
-//Define Motor DC 12V - Bánh đà (N: Nâng thùng)
+//Define Motor DC 12V - Nâng thùng (N: Nâng thùng)
 #define DN 12
 #define AN 13
 
