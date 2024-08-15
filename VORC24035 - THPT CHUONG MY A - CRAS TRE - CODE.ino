@@ -30,8 +30,8 @@ PS2X ps2x;
 #define AN 13
 
 //Define Servo 360 (SV: Servo)
-#define SVT 6
-#define SVP 3
+#define SVT 1
+#define SVP 2
 
 //Define Servo 180
 #define SVC 7 //SV cửa
