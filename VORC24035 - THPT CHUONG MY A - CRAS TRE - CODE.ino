@@ -203,40 +203,30 @@ void loop() {
 
   //Nâng thùng
   if (ps2x.Button(PSB_RED)) {
-    if (nang == false) {
-      pwm.setPWM(DN, 0, 3891);
-      nang = true;
-      Serial.println("Nâng thùng lên");
-      delay(50);
-    }
+    pwm.setPWM(DN, 0, 3891);
+    Serial.println("Nâng thùng lên");
+    delay(50);
+  }
 
-    else if (ps2x.ButtonReleased(PSB_RED)) {
-      pwm.setPWM(DN, 0, 0);
-      nang = false;
-      Serial.println("Đứng yên");
-      delay(50);
-    }
+  else if (ps2x.ButtonReleased(PSB_RED)) {
+    pwm.setPWM(DN, 0, 0);
+    Serial.println("Đứng yên");
+    delay(50);
   }
 
 
 
   //Hạ thùng
   if (ps2x.Button(PSB_GREEN)) {
-    if (nang == false) {
-      pwm.setPWM(AN, 0, 3891);
-      nang = true;
-      Serial.println("Hạ thùng xuống");
-      delay(50);
-    }
-
-    else if (ps2x.ButtonReleased(PSB_GREEN)) {
-      pwm.setPWM(AN, 0, 0);
-      nang = false;
-      Serial.println("Đứng yên");
-      delay(50);
-    }
+    pwm.setPWM(AN, 0, 3891);
+    Serial.println("Hạ thùng xuống");
+    delay(50);
   }
-
+  else if (ps2x.ButtonReleased(PSB_GREEN)) {
+    pwm.setPWM(AN, 0, 0);
+    Serial.println("Đứng yên");
+    delay(50);
+  }
 
   //Cửa 
   if (ps2x.Button(PSB_BLUE) && cua < 1770) {
