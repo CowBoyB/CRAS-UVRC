@@ -242,7 +242,7 @@ void loop() {
   if (ps2x.Button(PSB_BLUE) && cua < 1770) {
     cua += 50;
     pwm.writeMicroseconds(SVC, cua);
-    Serial.print("Góc hiện tại theo us là: ");
+    Serial.print("Góc hiện tại theo microsecond là: ");
     Serial.println(cua);
     delay(10);
   }
@@ -250,7 +250,7 @@ void loop() {
   if (ps2x.Button(PSB_PINK) && cua > 700) {
     cua -= 50;
     pwm.writeMicroseconds(SVC, cua);
-    Serial.print("Góc hiện tại theo us là: ");
+    Serial.print("Góc hiện tại theo microsecond là: ");
     Serial.println(cua);
     delay(10);
   }
