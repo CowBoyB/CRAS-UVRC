@@ -177,7 +177,6 @@ void loop() {
   if (ps2x.Button(PSB_RED)) {
       pwm.writeMicroseconds(SVT, 700);
       pwm.writeMicroseconds(SVP, 700);
-      chuyen = true;
       Serial.println("Nâng thùng")
       delay(50);
     }
@@ -185,7 +184,6 @@ void loop() {
     else if (ps2x.ButtonReleased(PSB_RED)) {
       pwm.writeMicroseconds(SVT, 1400);
       pwm.writeMicroseconds(SVP, 1400);
-      chuyen = false;
       Serial.println("Không di chuyển");
       delay(50);
   }
@@ -196,7 +194,6 @@ void loop() {
   if (ps2x.Button(PSB_GREEN)) {
       pwm.writeMicroseconds(SVT, 2300);
       pwm.writeMicroseconds(SVP, 2300);
-      chuyen = true;
       Serial.println("Hạ thùng")
       delay(50);
     }
@@ -204,7 +201,6 @@ void loop() {
     else if (ps2x.ButtonReleased(PSB_GREEN)) {
       pwm.writeMicroseconds(SVT, 1400);
       pwm.writeMicroseconds(SVP, 1400);
-      chuyen = false;
       Serial.println("Không di chuyển");
       delay(50);
     }
