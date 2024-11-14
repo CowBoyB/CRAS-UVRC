@@ -38,8 +38,6 @@ PS2X ps2x;
 
 //Tạo các biến cần thiết
 bool thu = false;
-bool chuyen = false;
-int cua = 700;
 int speed = 3071;
 bool boost = false;
 
@@ -180,8 +178,7 @@ void loop() {
 
 
   //Nâng thùng
-  if (ps2x.Button(PSB_RED) {
-    if (chuyen == false) {
+  if (ps2x.Button(PSB_RED)) {
       pwm.writeMicroseconds(SVT, 700);
       pwm.writeMicroseconds(SVP, 700);
       chuyen = true;
@@ -195,14 +192,12 @@ void loop() {
       chuyen = false;
       Serial.println("Không di chuyển");
       delay(50);
-    }
   }
 
 
 
   //Hạ thùng
-  if (ps2x.Button(PSB_GREEN) {
-    if (chuyen == false) {
+  if (ps2x.Button(PSB_GREEN)) {
       pwm.writeMicroseconds(SVT, 2300);
       pwm.writeMicroseconds(SVP, 2300);
       chuyen = true;
@@ -217,6 +212,5 @@ void loop() {
       Serial.println("Không di chuyển");
       delay(50);
     }
-  }
 }
 /* CODE THUỘC VỀ ĐỘI THI CRAS*/
