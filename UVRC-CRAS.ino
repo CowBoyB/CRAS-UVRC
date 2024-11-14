@@ -92,14 +92,14 @@ void loop() {
   else if (ps2x.Button(PSB_PAD_LEFT)) {  // Sang trái
     pwm.setPWM(DT, 0, 0);
     pwm.setPWM(AT, 0, 2048);
-    pwm.setPWM(DP, 0, 0);
+    pwm.setPWM(DP, 0, 2048);
     pwm.setPWM(AP, 0, 0);
     Serial.println("Đang sang trái");
     delay(50); 
   }
 
   else if (ps2x.Button(PSB_PAD_RIGHT)) {  // Sang phải
-    pwm.setPWM(DT, 0, 0);
+    pwm.setPWM(DT, 0, 2048);
     pwm.setPWM(AT, 0, 0);
     pwm.setPWM(DP, 0, 0);
     pwm.setPWM(AP, 0, 2048);
@@ -244,4 +244,4 @@ void loop() {
     delay(10);
   }
 }
-/* CODE THUỘC VỀ ĐỘI THI CRAS TRẺ*/
+/* CODE THUỘC VỀ ĐỘI THI CRAS*/
