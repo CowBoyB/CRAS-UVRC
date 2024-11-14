@@ -25,16 +25,12 @@ PS2X ps2x;
 #define DL 10
 #define AL 11
 
-//Define Motor DC 12V - Nâng thùng (N: Nâng thùng)
-#define DN 12
-#define AN 13
 
 //Define Servo 360 (SV: Servo)
 #define SVT 1
 #define SVP 2
 
-//Define Servo 180
-#define SVC 7 //SV cửa
+
 
 //Tạo các biến cần thiết
 bool thu = false;
