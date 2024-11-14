@@ -179,69 +179,44 @@ void loop() {
 
 
 
-  //Chuyển bóng
-  if (ps2x.ButtonPressed(PSB_L1)) {
+  //Nâng thùng
+  if (ps2x.Button(PSB_RED) {
     if (chuyen == false) {
       pwm.writeMicroseconds(SVT, 700);
-      pwm.writeMicroseconds(SVP, 2300);
+      pwm.writeMicroseconds(SVP, 700);
       chuyen = true;
-      Serial.println("Chuyển bóng ra");
+      Serial.println("Nâng thùng")
       delay(50);
     }
 
-    else {
+    else if (ps2x.ButtonReleased(PSB_RED)) {
       pwm.writeMicroseconds(SVT, 1400);
       pwm.writeMicroseconds(SVP, 1400);
       chuyen = false;
-      Serial.println("Không chuyển");
+      Serial.println("Không di chuyển");
       delay(50);
     }
-  }
-
-
-
-  //Nâng thùng
-  if (ps2x.Button(PSB_RED)) {
-    pwm.setPWM(DN, 0, 3891);
-    Serial.println("Nâng thùng lên");
-    delay(50);
-  }
-
-  else if (ps2x.ButtonReleased(PSB_RED)) {
-    pwm.setPWM(DN, 0, 0);
-    Serial.println("Đứng yên");
-    delay(50);
   }
 
 
 
   //Hạ thùng
-  if (ps2x.Button(PSB_GREEN)) {
-    pwm.setPWM(AN, 0, 3891);
-    Serial.println("Hạ thùng xuống");
-    delay(50);
-  }
-  else if (ps2x.ButtonReleased(PSB_GREEN)) {
-    pwm.setPWM(AN, 0, 0);
-    Serial.println("Đứng yên");
-    delay(50);
-  }
+  if (ps2x.Button(PSB_GREEN) {
+    if (chuyen == false) {
+      pwm.writeMicroseconds(SVT, 2300);
+      pwm.writeMicroseconds(SVP, 2300);
+      chuyen = true;
+      Serial.println("Hạ thùng")
+      delay(50);
+    }
 
-  //Cửa 
-  if (ps2x.Button(PSB_BLUE) && cua < 1770) {
-    cua += 50;
-    pwm.writeMicroseconds(SVC, cua);
-    Serial.print("Góc hiện tại theo microsecond là: ");
-    Serial.println(cua);
-    delay(10);
-  }
-
-  if (ps2x.Button(PSB_PINK) && cua > 700) {
-    cua -= 50;
-    pwm.writeMicroseconds(SVC, cua);
-    Serial.print("Góc hiện tại theo microsecond là: ");
-    Serial.println(cua);
-    delay(10);
+    else if (ps2x.ButtonReleased(PSB_GREEN)) {
+      pwm.writeMicroseconds(SVT, 1400);
+      pwm.writeMicroseconds(SVP, 1400);
+      chuyen = false;
+      Serial.println("Không di chuyển");
+      delay(50);
+    }
   }
 }
 /* CODE THUỘC VỀ ĐỘI THI CRAS*/
